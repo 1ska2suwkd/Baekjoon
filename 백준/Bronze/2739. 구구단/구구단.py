@@ -1,6 +1,5 @@
 n = int(input())
-i = 0
 
-while i<9:
+for i in range(0,9):
     i+=1
-    print("%d * %d = %d" %(n,i,n*i))
+    print(f"{n} * {i} = {n*i}")
