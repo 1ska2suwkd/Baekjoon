@@ -3,7 +3,7 @@ def palin(x,y):
         y.append(i)
     y.reverse()
 
-x = [1]    
+x = []    
 
 while(True):
     y = []
