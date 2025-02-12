@@ -4,14 +4,8 @@ for _ in range(3):
     
 for i in range(3):
     if inputs[i].isdigit():
+        start = int(inputs[i]) - i  # 현재 위치에 맞게 보정
         break
-    
-if i == 0:
-    output = int(inputs[i])+3
-if i == 1:
-    output = int(inputs[i])+2
-if i == 2:
-    output = int(inputs[i])+1
     
 def check_fizzbuzz(value):
     if value % 3 == 0 and value % 5 == 0:
@@ -24,4 +18,4 @@ def check_fizzbuzz(value):
         return str(value)
     
     
-print(check_fizzbuzz(output))
+print(check_fizzbuzz(start+3))
