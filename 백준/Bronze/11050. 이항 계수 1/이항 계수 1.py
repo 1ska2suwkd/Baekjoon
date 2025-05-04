@@ -1,16 +1,13 @@
-N, K = map(int, input().split())
-
-num = N - K 
-
 def factorial(n):
     result = 1
     while n > 1:
         result *= n
         n-=1
     return result
+    
+N, K = map(int, input().split())
 
-N = factorial(N)
-K = factorial(K)
-num = factorial(num)
+top = factorial(N)
+bottom = factorial(K) * factorial(N-K)
 
-print(N//(K*num))
+print(top//bottom)
