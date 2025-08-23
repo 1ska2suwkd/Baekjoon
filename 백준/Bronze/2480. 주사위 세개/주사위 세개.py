@@ -1,21 +1,16 @@
 n1,n2,n3 = map(int,input().split())
-count = 0
-list = [0,0,0,0,0,0,0]
+nums = [n1,n2,n3]
+s = set(nums)
 
-list[n1] += 1
-list[n2] += 1
-list[n3] += 1
-
-for i in list:
-    if i == 3:
-        winning = 10000+count*1000
-        print(winning)
-        exit()
-    elif i == 2:
-        winning = 1000+count*100
-        print(winning)
-        exit()
-    count+=1
-
-winning = max(n1,n2,n3) * 100
-print(winning)
+if len(s) == 1:
+    prize = 10000 + n1 * 1000
+    print(prize)
+elif len(s) == 2:
+    for i in nums:
+        if nums.count(i) == 2:
+            prize = 1000 + i * 100
+            print(prize)
+            break
+else:
+    prize = max(nums) * 100
+    print(prize)
